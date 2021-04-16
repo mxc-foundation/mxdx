@@ -1,0 +1,4 @@
+{"services": {
+  "BuildServer":{"name":"BuildServer","status":"Available","signal":":green_square:"},"BuildServer2":{"name":"BuildServer2","status":"Available","signal":":green_square:"}}
+
+}

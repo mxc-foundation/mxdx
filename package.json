@@ -1,0 +1,58 @@
+{
+  "name": "mxdx",
+  "version": "0.5.0",
+  "description": "MXC team bot to manage team resources, and team Discord server. ",
+  "main": "index.js",
+  "engines": {
+    "node": "15.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@digitalroute/cz-conventional-changelog-for-jira": "^6.1.0",
+    "axios": "^0.21.1",
+    "commitizen": "^4.2.3",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase": "^8.2.2",
+    "firebase-admin": "^9.4.2",
+    "googleapis": "^67.0.0",
+    "rollbar": "^2.19.4",
+    "set-interval-async": "^1.0.34"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.17.0",
+    "kcd-scripts": "^7.5.4",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/kcd-scripts/eslint.js",
+    "rules": {
+      "babel/camelcase": "off",
+      "no-console": "off",
+      "consistent-return": "off",
+      "require-await": "off",
+      "max-statements": [
+        "error",
+        150
+      ],
+      "complexity": [
+        "error",
+        20
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ]
+}
