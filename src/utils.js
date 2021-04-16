@@ -53,102 +53,6 @@ function deleteMessage(message, timeout) {
         .catch(console.error)
 }
 
-function buildEmbed(resourcesJson) {
-    const commandExample = '`!checkout BuildServer MMD-123`'
-    const returnCommandExample = '`!return BuildServer`'
-    return new Discord.MessageEmbed()
-        .setColor('#0099ff')
-        .setTitle('MXC Resource Dashboard')
-        .setAuthor(
-            'MXDX',
-            '***REMOVED***',
-            'https://www.google.com'
-        )
-        .setDescription("Here's a quick overview of who is using what.")
-        .addFields(
-            {
-                name: 'Commands',
-                value: `${commandExample}
-            ${returnCommandExample}`,
-            },
-            { name: '\u200B', value: '\u200B' },
-            {
-                name: 'Status',
-                value: resourcesJson.BuildServer.signal,
-                inline: true,
-            },
-            {
-                name: 'Server',
-                value: resourcesJson.BuildServer.name,
-                inline: true,
-            },
-            {
-                name: 'Description',
-                value: resourcesJson.BuildServer.status,
-                inline: true,
-            }
-        )
-        .addFields(
-            {
-                name: '\u200B',
-                value: resourcesJson.BuildServer2.signal,
-                inline: true,
-            },
-            {
-                name: '\u200B',
-                value: resourcesJson.BuildServer2.name,
-                inline: true,
-            },
-            {
-                name: '\u200B',
-                value: resourcesJson.BuildServer2.status,
-                inline: true,
-            },
-            { name: '\u200B', value: '\u200B' }
-        )
-        .addFields(
-            {
-                name: '\u200B',
-                value: resourcesJson.TestServer.signal,
-                inline: true,
-            },
-            {
-                name: '\u200B',
-                value: resourcesJson.TestServer.name,
-                inline: true,
-            },
-            {
-                name: '\u200B',
-                value: resourcesJson.TestServer.status,
-                inline: true,
-            },
-            { name: '\u200B', value: '\u200B' }
-        )
-        .addFields(
-            {
-                name: '\u200B',
-                value: resourcesJson.TestChina.signal,
-                inline: true,
-            },
-            {
-                name: '\u200B',
-                value: resourcesJson.TestChina.name,
-                inline: true,
-            },
-            {
-                name: '\u200B',
-                value: resourcesJson.TestChina.status,
-                inline: true,
-            },
-            { name: '\u200B', value: '\u200B' }
-        )
-        .setTimestamp()
-        .setFooter(
-            'Last updated',
-            '***REMOVED***'
-        )
-}
-
 function updateMessage(message, msgId, resourcesJson) {
     message.channel.messages.fetch({ around: msgId, limit: 1 }).then((msg) => {
         const fetchedMsg = msg.first()
@@ -202,8 +106,6 @@ function cleanupGuildOnInterval(client, cb, interval) {
     }, interval)
 }
 
-***REMOVED***
-
 module.exports = {
     getCommandArgs,
     getRole,
@@ -221,5 +123,4 @@ module.exports = {
     getCategory,
     timeToMs,
     cleanupGuildOnInterval,
-    allowedGuilds,
 }

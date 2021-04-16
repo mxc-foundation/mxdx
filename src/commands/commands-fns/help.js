@@ -1,4 +1,4 @@
-const { deleteMessage, allowedGuilds } = require('../utils')
+const { deleteMessage } = require('../utils')
 
 async function handleHelpCommand(message) {
     deleteMessage(message)
