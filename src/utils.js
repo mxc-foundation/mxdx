@@ -115,7 +115,6 @@ module.exports = {
     isCommand,
     rollbar,
     commandRegex,
-    buildEmbed,
     updateMessage,
     privateChannelPrefix,
     listify,
