@@ -2,6 +2,11 @@
   "points" : {
     "userId" : 10
   },
+  "pointsSpent" : {
+    "userId" : {
+      "date": 10
+    }
+  },
   "servers" : {
     "server" : "id"
   }
